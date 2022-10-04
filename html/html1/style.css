@@ -1,0 +1,42 @@
+*{}
+body{
+    margin: 0px;
+    background-image: url(BG3.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bigBox{
+    width: 800px; 
+    height: auto;
+    border: solid 1px grey;
+    margin: 0px auto;
+    min-height: 700px;
+    
+}
+.upMenu{
+    border: solid 1px grey;
+    height: 30px;
+}
+.banners{
+    border: solid 1px grey;
+    height: 200px;
+}
+.servMenu{
+    border: 0;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: aliceblue;
+}
+.mainBox{
+    border: solid 1px grey;
+    min-height: 260px;
+}
+.feedback{
+    border: solid 1px grey;
+    height: 150px;1
+}
+.footer{
+    border: solid 1px grey;
+    height: 200px;
+}
