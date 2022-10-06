@@ -49,6 +49,17 @@ body {
   text-align: center;
 }
 
+.box3 {
+    grid-area: b;
+    justify-self: center;
+    border: 2px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+}
+
 .boxbox {
   display: grid;
   grid-template-columns: auto;
@@ -83,8 +94,10 @@ body {
   border-radius: 5px;
   grid-template-columns: auto;
   padding: 10px;
+  margin: 10px;
   row-gap: 10px;
   column-gap: 10px;
+  text-align: center;
   grid-template-areas:
     "a a b b b c c c"
     "a a n n n c c c"
@@ -95,7 +108,8 @@ body {
     grid-area: a;
     border: 2px solid;
     border-radius: 5px;
-
+    background: url(oled.webp);
+    background-size: 100% 100%;
 
 }
 
@@ -103,6 +117,7 @@ body {
     grid-area: b;
     border: 2px solid;
     border-radius: 5px;
+    width: 200px;
 }
 
 .sostav3{
@@ -121,5 +136,12 @@ body {
     grid-area: m;
     border: 2px solid;
     border-radius: 5px;
+    
 }
-
+ img{
+    width: 400px;
+    height: 200px;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 10px;
+ }
