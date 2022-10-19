@@ -1,4 +1,11 @@
-*{
+*{}
 
+body{
+    border: solid black;
+    border-radius: 5px;
 }
 
+.col-12{
+    border: solid black;
+    border-radius: 5px;
+}
