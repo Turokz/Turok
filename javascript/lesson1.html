@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script language="javascript">
+n=5; m=6;
+map=Array();
+for(i=0;i<n;i++){
+  map[i]=Array();
+            for(j=0;j<m;j++){
+                        map[i][j]=0;            
+            }
+}
+map[0][2]=-1;
+map[1][1]=-1;
+map[2][1]=-1;
+
+ 
+
+ 
+
+function mapBuilder(){
+            newMap=document.createElement("table");
+            newMap.setAttribute("id","anthill");
+            for(i=0;i<map.length;i++){
+                        newRow=document.createElement("tr");
+                        for(j=0; j<map[0].length; j++) {
+                                        newCell=document.createElement("td");
+                                        newCell.setAttribute("style","width: 20px; height: 20px; border:solid 1px grey;");
+                                        newCell.innerHTML=map[i][j];
+                                        newRow.appendChild(newCell);
+                        }    
+                        newMap.appendChild(newRow);
+            }
+            if(document.getElementById("anthill")!=null){
+                        oldMap=document.getElementById("anthill");
+                        oldMap.parentNode.removeChild(oldMap);
+        }
+            document.body.appendChild(newMap);
+}
+
+ 
+
+function ant(){
+            do {
+            x=Math.floor(Math.random()*map.length);
+            y=Math.floor(Math.random()*map[0].length);
+            }while(map[x][y]!=0);
+            ik=65;
+            map[x][y]=ik;
+}
+
+ 
+
+
+</script>
+</head>
+<body onload="ant();mapBuilder()">
+
+ 
+
+</body>
+</html>
