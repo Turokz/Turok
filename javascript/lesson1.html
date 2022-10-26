@@ -49,6 +49,43 @@ function ant(){
             }while(map[x][y]!=0);
             ik=65;
             map[x][y]=ik;
+            walkAnt(ik)
+}
+function walkAnt(me){
+//0. определение собственных координат
+cx= 0; cy=0;
+
+for(i=0;i<map.length;i++){
+ for(j=0;j<map.length;j++){
+  if(map[i][j]==me){cx=i; cy=j;}
+}
+}
+
+//1. определение возможных соседних клеток
+cellsToGo=Array();
+for(i=(cx<1?0:cx-1);i<(cx==map.length-1?map.length-1:cx+1);i++){
+    for(j=(cy<1?0:cy-1);j<(cy==map.length-1?map[0].length-1:cy+1);j++){
+        if(Math.abs(cx-1)+Math.abs(cy-j)==1){
+            if(map[i][j]==0){
+                cellsToGo.push(Array(i,j));
+
+            }
+        }
+    }
+}
+
+//2. определение свободных соседних клеток
+//3. выбор клетки для перемещения
+nextStep=cellsToGo[Math.floor(Math.random()*cellsToGo.length)];
+
+//4. регистрация собственного номера в выбранной клетке
+map[nextStep[0]][nextStep[1]]=me;
+//5. удаление собственного номера из предидущей клетки
+map[cx][cy]=0;
+mapBuilder();
+setTimeout(walkAnt, 1000, me);
+
+
 }
 
  
